@@ -23,7 +23,7 @@ export default function Home() {
             <TitleBanner />
           </div>
           <div className="w-full flex flex-wrap gap-20">
-            <div className="max-w-[50vw] ">
+            <div className="max-w-[30vw] ">
               <Image className="w-full object-contain" src="https://iili.io/dr0IS0x.jpg" width={1000} height={1000} alt="rerere" />
             </div>
             <TextBio />
