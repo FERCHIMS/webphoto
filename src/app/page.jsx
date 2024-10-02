@@ -4,6 +4,7 @@ import DropDown from "@/components/dropdown/DropDown";
 import TextBio from "@/components/titles/TextBio";
 import TitleBanner from "@/components/titles/TitleBanner";
 import TopPage from "@/components/toppage/TopPage";
+import TopResize from "@/components/toppage/TopResize";
 import UsageTop from "@/components/UsageTop";
 import Image from "next/image";
 
@@ -13,7 +14,10 @@ export default function Home() {
       <div className="z-[100] fixed w-full">
         <DropDown />
       </div>
-      <div className="z-50 flex bg-black">
+      <div className="w-full block lg:hidden">
+        <TopResize />
+      </div>
+      <div className="z-50 hidden bg-black lg:flex">
         <TopPage>
           <div className="">
             <TitleBanner />
