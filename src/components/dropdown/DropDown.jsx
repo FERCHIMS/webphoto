@@ -1,4 +1,6 @@
 'use client'
+import { Deutschlander } from "@/app/fonts/Fonts";
+import Link from "next/link";
 import { useState } from "react"
 
 const DropDown = ({ children, buttonText }) => {
@@ -12,14 +14,14 @@ const DropDown = ({ children, buttonText }) => {
         <>
 
             <div className={`w-full absolute overflow-hidden transition-all duration-[1200ms] bg-red-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${isDrop ? "h-screen " : "h-0"} `} >
-                <div className="w-full flex justify-center items-center">
-                    <ul className="flex flex-col">
-                        <li>HOLA</li>
-                        <li>HOLA2</li>
-                        <li>HOLA3</li>
-                        <li>HOLA4</li>
-                        <li>HOLA5</li>
-                        <li>HOLA6</li>
+                <div className="w-full h-full flex justify-center items-center">
+                    <ul className="flex w-full gap-[-10px] justify-center items-center  flex-col">
+                        <Link className={`${Deutschlander.className} text-[6rem] leading-none bg-yellow-400`} href="/fashion" > FASHION</Link>
+                        <li className={`${Deutschlander.className} h-fit text-[6rem] leading-none`}>STREET</li>
+                        <li className={`${Deutschlander.className} h-fit text-[6rem] leading-none`}>ADVERTISING</li>
+                        <li className={`${Deutschlander.className} h-fit text-[6rem] leading-none`}>KIDS</li>
+                        <li className={`${Deutschlander.className} h-fit text-[6rem] leading-none`}>WEDDING</li>
+                        <li className={`${Deutschlander.className} h-fit text-[6rem] leading-none`}>PORTRAIT</li>
                     </ul>
                 </div>
             </div>
