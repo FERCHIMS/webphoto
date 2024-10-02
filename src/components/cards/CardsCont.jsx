@@ -7,7 +7,7 @@ const CardsCont = () => {
         {
             title: "Fashion",
             src: "https://iili.io/dr00eK7.jpg",
-            href: "/",
+            href: "/fashion",
             bgColor:"bg-black"
         },
         {

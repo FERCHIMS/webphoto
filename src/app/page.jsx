@@ -1,5 +1,6 @@
 import Cards from "@/components/cards/Cards";
 import CardsCont from "@/components/cards/CardsCont";
+import DropDown from "@/components/dropdown/DropDown";
 import TextBio from "@/components/titles/TextBio";
 import TitleBanner from "@/components/titles/TitleBanner";
 import TopPage from "@/components/toppage/TopPage";
@@ -9,7 +10,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="w-full flex flex-col bg-black ">
-      
+      <div className="z-[100] fixed w-full">
+        <DropDown />
+      </div>
       <div className="z-50 flex bg-black">
         <TopPage>
           <div className="">
