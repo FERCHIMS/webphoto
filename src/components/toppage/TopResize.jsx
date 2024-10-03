@@ -18,6 +18,7 @@ const TopResize = () => {
             </div>
         </div>
     )
+
 }
 
 export default TopResize;
