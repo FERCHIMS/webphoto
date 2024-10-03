@@ -64,7 +64,7 @@ const DropDown = ({ children, buttonText }) => {
             </div>
 
             <div className=" relative overflow-hidden z-[1000px] w-full flex justify-end pr-2   ">
-                <button className=" z-10 overflow-hidden block lg: top-4  rounded-l-[100px] rounded-r-[100px]  w-[80px] h-[80px]" onClick={handleDrop}>
+                <button className=" z-10 overflow-hidden block lg:hidden top-4  rounded-l-[100px] rounded-r-[100px]  w-[80px] h-[80px]" onClick={handleDrop}>
                     <div className={`w-full gap-8 flex flex-col overflow-hidden justify-center items-center transition duration-700 ${isDrop ? "translate-y-[-6vh] " : "translate-y-[3.5vh]"} `}>
                         <div className={`w-full h-full overflow-hidden items-center  flex flex-col transition duration-700 ${isDrop ? "opacity-0 rotate-90" : "opacity-100 rotate-0"} `} >
                             <svg className="w-[50%]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 25">
