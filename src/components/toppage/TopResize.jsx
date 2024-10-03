@@ -6,7 +6,7 @@ const TopResize = () => {
     return (
         <div className="flex flex-col items-center justify-center  pt-5">
             <div className="py-10 pl-[5vw] lg:pl-0  ">
-                <h2 className={`${ResolveThin.className} text-[5em] md:text-[7em] leading-none text-white`}>CHRISTIAN JOHNS</h2>
+                <h2 className={`${ResolveThin.className} text-[5em] md:text-[7em] leading-none h-[200px] pt-10 text-white`}>CHRISTIAN JOHNS</h2>
             </div>
             <div className="flex flex-col items-center" >
                 <div>
