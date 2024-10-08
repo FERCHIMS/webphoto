@@ -6,7 +6,10 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    screens: {
+    /* screens: {
+      'sm2': '435px',
+      // => @media (min-width: 435px) { ... }
+
       'sm1': '490px',
       // => @media (min-width: 490px) { ... }
 
@@ -24,7 +27,7 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
-    },
+    }, */
     extend: {
       colors: {
         background: "var(--background)",
