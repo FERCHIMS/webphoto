@@ -2,12 +2,15 @@
 import { Deutschlander } from "@/app/fonts/Fonts";
 import Link from "next/link";
 import { useState, useEffect } from "react"
+import TransitionLink from "../transitionLink/TransitionLink";
+import { links } from "../links/Links";
 
 const DropDown = ({ children, buttonText }) => {
     const [isDrop, setIsDrop] = useState(false);
 
     const handleDrop = () => {
         setIsDrop(!isDrop)
+        
     };
 
     useEffect(() => {
@@ -26,29 +29,13 @@ const DropDown = ({ children, buttonText }) => {
     return (
         <>
 
-            <div className={`w-full absolute overflow-hidden transition-all duration-[1200ms]  bg-red-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${isDrop ? "h-screen overflow-y-auto" : "h-0"} `} >
+            <div className={`w-full hidden z-50 absolute overflow-hidden transition-all duration-[1200ms]  bg-red-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${isDrop ? "h-screen overflow-y-auto" : "h-0"} `} >
                 <div className="w-full flex justify-center items-center ">
                     <ul className="flex w-full gap-[-10px] z-10 justify-center  items-center  flex-col">
-                        <Link className={`flex justify-center items-center ${Deutschlander.className} text-[6rem] leading-none `} href="/fashion" > FASHION</Link>
-                        <li className={`flex justify-center items-center ${Deutschlander.className} h-fit text-[6rem] leading-none`}>STREET</li>
-                        <li className={`flex justify-center items-center ${Deutschlander.className} h-fit text-[6rem] leading-none`}>ADVERTISING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>KIDS</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>WEDDING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>PORTRAIT</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>ADVERTISING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>KIDS</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>WEDDING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>PORTRAIT</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>ADVERTISING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>KIDS</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>WEDDING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>PORTRAIT</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>ADVERTISING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>KIDS</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>WEDDING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>PORTRAIT</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>ADVERTISING</li>
-                        <li className={`flex justify-center items-center${Deutschlander.className} h-fit text-[6rem] leading-none`}>KIDS</li>
+                        {links.map((link) => (
+                            <TransitionLink href={link.href} >{link.title} </TransitionLink>
+                        ))}
+                        
                         
                     </ul>
                 </div>

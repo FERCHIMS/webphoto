@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import LenisScroll from "@/components/lenis-scroll/LenisScroll";
+import DropDown from "@/components/dropdown/DropDown";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,11 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html  lang="en">
       <LenisScroll>
+        
       <body
       >
-        
+        <DropDown />
+        <div className="transition-container bg-black">
         {children}
-        
+        </div>
       </body>
       </LenisScroll>
     </html>

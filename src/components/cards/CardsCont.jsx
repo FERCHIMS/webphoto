@@ -1,52 +1,23 @@
 
 import Link from 'next/link'
 import Cards from './Cards'
-const CardsCont = () => {
+import TransitionLink from '../transitionLink/TransitionLink'
+import { linksHome } from '../links/Links'
 
-    const links = [
-        {
-            title: "Fashion",
-            src: "https://iili.io/dr00eK7.jpg",
-            href: "/fashion",
-            bgColor:"bg-black"
-        },
-        {
-            title: "Jewelry",
-            src: "https://iili.io/dsV3xS4.png",
-            href: "/",
-            bgColor:"bg-pink-400"
-        },
-        {
-            title: "Street",
-            src: "https://iili.io/dLCA6Gf.jpg",
-            href: "/",
-            bgColor:"bg-green-400"
-        },
-        {
-            title: "Bride",
-            src: "https://iili.io/dLf1nPs.jpg",
-            href: "/",
-            bgColor:"bg-orange-400"
-        },
-        {
-            title: "Advertising",
-            src: "https://iili.io/dsS7Ngp.webp",
-            href: "/",
-            bgColor:"bg-yellow-400"
-        },
-    ]
+const CardsCont = () => {
     return (
         <div className='w-full grid gap-2 grid-cols-2 bg-black'>
-            {links.map((link) => (
-                <div key={link.title} className=''>
-                    <Link href={link.href}>
+            {linksHome.map((links) => (
+                <div key={links.title} className=''>
+
+                    <TransitionLink href={links.href}>
                     <Cards
-                        src={link.src}
-                        text={link.title}
+                        src={links.src}
+                        text={links.title}
                         className1=""
-                        className4={link.bgColor}
+                        className4={links.bgColor}
                     />
-                    </Link>
+                    </TransitionLink>
                 </div>
 
             ))}

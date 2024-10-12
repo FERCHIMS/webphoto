@@ -8,13 +8,40 @@
   box-sizing: border-box;
   list-style: none;
   width: 100%;
-  
+
 
 }
+
 body {
   background-color: black;
 }
 
-div, h1, h2, h3, h4, h5, li, Link, ul {
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+Link,
+ul {
   background-color: transparent;
+}
+
+
+.transition-container {
+  transition-property: opacity, background, transform, filter;
+  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  transition-duration: 1100ms;
+  
+}
+
+
+
+.page-transition {
+  opacity: 0;
+  background: black;
+  /* transform: translateX(40px); */
+  filter: blur(12px);
+  /* transform: scale(75%); */
 }

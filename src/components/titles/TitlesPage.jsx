@@ -4,7 +4,7 @@ import { Deutschlander, HelvDisplayExBold, ResolveBlack, ResolveLight, ResolveTh
 /* import Redes from "../redes/Redes"; */
 
 
-const TitleBanner = () => {
+const TitlePage = ({title}) => {
     const [isInView, setIsInview] = useState(false);
     const titleRef = useRef(null);
 
@@ -25,11 +25,10 @@ const TitleBanner = () => {
     },[])
 
   return (
-    <div className="overflow-hidden pt-[3rem] z-50  w-fit flex justify-start  ">
-        <h2 ref={titleRef} className={`text-[3em] w-full leading-[1em] sm:leading-0 sm:text-[3em] tracking-[0.1em] text-[#848484] transition-all duration-[1200ms] delay-200 font-bold ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${ResolveThin.className} ${isInView ? "translate-y-0 opacity-100 " : "translate-y-[5vh] opacity-0"}  `} >CHRISTIAN JOHNS</h2>
-        {/* <Redes /> */}
+    <div className="overflow-hidden z-50  w-fit ">
+        <h2 ref={titleRef} className={`text-[2em] overflow-hidden w-full leading-[1em] sm:leading-0 sm:text-[3em] tracking-[0.1em] text-[#848484] transition-all duration-[1200ms] delay-200 font-bold ease-[cubic-bezier(0.25, 1, 0.5, 1)] ${ResolveThin.className} ${isInView ? "translate-y-0 opacity-100 " : "translate-y-[5vh] opacity-0"}  `} >{title}</h2>
     </div>
   )
 }
 
-export default TitleBanner
+export default TitlePage;
