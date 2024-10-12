@@ -1,5 +1,5 @@
 
-import { getModels } from '@/components/llamadas/llamadas'
+import getModels from '@/components/llamadas/llamadas'
 
 import TitlePage from '@/components/titles/TitlesPage'
 import NavPages from '@/components/navpages/NavPages'

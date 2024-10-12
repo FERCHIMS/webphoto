@@ -33,7 +33,7 @@ const DropDown = ({ children, buttonText }) => {
                 <div className="w-full flex justify-center items-center ">
                     <ul className="flex w-full gap-[-10px] z-10 justify-center  items-center  flex-col">
                         {links.map((link) => (
-                            <TransitionLink href={link.href} >{link.title} </TransitionLink>
+                            <TransitionLink key={link.title} href={link.href} >{link.title} </TransitionLink>
                         ))}
                         
                         
